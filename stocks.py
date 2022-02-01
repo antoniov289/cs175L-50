@@ -2,19 +2,19 @@
 #Antonio Vinagre
 #stocks.py
 
-commission_rate = input("What was the commission rate for the stocks? ")
-num_shares = input("How many were purchased? ")
-purchase_price = input("How much was the purchase price? ")
-selling_price = input("How much did you sell them for? ")
+commission_rate = float(input("What was the commission rate?: "))
+num_shares = float(input("How many shares did you purchase?: "))
+purchase_price = float(input("What was the purchase price?: "))
+selling_price = float(input("What was the selling price?: "))
 
 
-amountPaidForStock = float(num_shares) * float(purchase_price)
-purchaseCommission = float(commission_rate) * amountPaidForStock
+amountPaidForStock = num_shares * purchase_price
+purchaseCommission = commission_rate * amountPaidForStock
 
 totalPaid = amountPaidForStock + purchaseCommission
 
-soldStockFor = float(num_shares) * float(selling_price)
-sellingCommission = float(commission_rate) * soldStockFor
+soldStockFor = num_shares * selling_price
+sellingCommission = commission_rate * soldStockFor
 
 totalReceived = soldStockFor - sellingCommission
 
@@ -22,10 +22,9 @@ profitOrLoss = totalReceived - totalPaid
 
 totalCommission = purchaseCommission + sellingCommission
 
-print(f"Joe paid ${amountPaidForStock:,.2f} for the stocks.")
-print(f"He paid ${purchaseCommission:,.2f} in commission when buying the stocks.")
-print(f"He then sold the stock for ${soldStockFor:,.2f}.")
-print(f"He paid the broker ${sellingCommission:,.2f} after recieving the stock.")
-print(f"He made ${totalReceived:,.2f} off of the sale.")
-print(f"The total commission he paid was ${totalCommission:,.2f}.")
-print(f"And finally, he profitted ${profitOrLoss:,.2f} at the end.")
+print(f"Amount Paid for Stock: ${amountPaidForStock:,.1f}")
+print(f"Commission Paid on the Purchase: ${purchaseCommission:,.1f}")
+print(f"Amount the Stock Sold for: ${soldStockFor:,.1f}")
+print(f"Commission Paid on the Sale: ${sellingCommission:,.1f}")
+print(f"Total Commission Paid: ${totalCommission:,.1f}")
+print(f"Profit (or Loss, if Negative): ${profitOrLoss:,.1f}")

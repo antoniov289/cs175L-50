@@ -7,17 +7,17 @@ vegetarian = False
 vegan = False
 gluten_free = False
 
-inp_vgtrn = input('Is anyone in your party a vegetarian? ')
+inp_vgtrn = input('Is anyone in your party a vegetarian (answer in all lower case)? ')
 
 if inp_vgtrn == "yes":
     vegetarian = True
 
-inp_vgn = input('Is anyone in your party a vegan? ')
+inp_vgn = input('Is anyone in your party a vegan (answer in all lower case)? ')
 
 if inp_vgn == "yes":
     vegan = True
 
-inp_gltnfr = input('Is anyone in your party gluten free? ')
+inp_gltnfr = input('Is anyone in your party gluten free (answer in all lower case)? ')
 
 if inp_gltnfr == "yes":
     gluten_free = True

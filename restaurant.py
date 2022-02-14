@@ -3,35 +3,40 @@
 #CS-175L
 #Spring 2022
 
-vegetarian = False
-vegan = False
-gluten_free = False
+while True:
+    vegetarian = False
+    vegan = False
+    gluten_free = False
 
-inp_vgtrn = input('Is anyone in your party a vegetarian (answer in all lower case)? ')
+    inp_vgtrn = input('Is anyone in your party a vegetarian? ')
 
-if inp_vgtrn == "yes":
-    vegetarian = True
+    if inp_vgtrn.lower() == "yes":
+        vegetarian = True
 
-inp_vgn = input('Is anyone in your party a vegan (answer in all lower case)? ')
+    inp_vgn = input('Is anyone in your party a vegan? ')
 
-if inp_vgn == "yes":
-    vegan = True
+    if inp_vgn.lower() == "yes":
+        vegan = True
 
-inp_gltnfr = input('Is anyone in your party gluten free (answer in all lower case)? ')
+    inp_gltnfr = input('Is anyone in your party gluten free? ')
 
-if inp_gltnfr == "yes":
-    gluten_free = True
+    if inp_gltnfr.lower() == "yes":
+        gluten_free = True
 
-print('Here are your restaurant choices:')
+    print('Here are your restaurant choices:')
 
-if not vegan == True and not vegetarian == True and not gluten_free == True:
-    print('Joe\'s Gourmet Burgers')
+    if not vegan == True and not vegetarian == True and not gluten_free == True:
+        print('Joe\'s Gourmet Burgers')
 
-if vegan == False and gluten_free == False:
-    print('Mama\'s Fine Italian')
+    if vegan == False and gluten_free == False:
+        print('Mama\'s Fine Italian')
 
-if vegan == False:
-    print('Main Street Pizza Company')
+    if vegan == False:
+        print('Main Street Pizza Company')
 
-print('Corner Café')
-print('The Chef\'s Kitchen')
+    print('Corner Café')
+    print('The Chef\'s Kitchen')
+
+    redo = input("Do you want to do another search? ")
+    if redo.lower() == "no":
+        break

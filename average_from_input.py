@@ -5,7 +5,7 @@
 
 def main():
     nums_file = open('numbers.txt', 'r')
-    line = nums_file.readline()
+    #line = nums_file.readline()
     tot = 0
     count = 0
     for line in nums_file:
